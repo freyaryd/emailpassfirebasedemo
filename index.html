@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Email/Password Accounts
+    </title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCjRmgXeSYj_uVVBUhPH2zdpS2Zi06MIKc",
+            authDomain: "bootlegchat-6343f.firebaseapp.com",
+            databaseURL: "https://bootlegchat-6343f.firebaseio.com",
+            projectId: "bootlegchat-6343f",
+            storageBucket: "bootlegchat-6343f.appspot.com",
+            messagingSenderId: "516878419860"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <button id="info"> display current user info </button>
+    <div id="infoHolder"></div>
+
+    <input type="text" name="user" id="user" placeholder="email" />
+    <input type="text" name="pass" id="pass" placeholder="password" />
+    <button id="logbtn">Log In</button>
+    <button id="acctbtn"> Create Account </button>
+    <br/>
+    <button id="logout">Log Out</button>
+
+    <script type="text/javascript" src="script.js"></script>
+
+
+    <p>
+        Set this up w/your account:
+        <ol>
+            <li>Put your own Firebase credentials in the head of this document. (Currently, lines 10-22)</li>
+            <li>Go to the "Authentication" tab in your Firebase console (Firebase website) and go to "Sign-in method." Enable email/password </li>
+            <li>Make an account, and check in the "Authentication" Firebase tab under "Users" that an account is created.</li>
+        </ol>
+        <br/> Using the demo:
+        <ol>
+            <li>You NEED to create an account to log in. You NEED a "properly" formatted email, ie something@something.something, and a password.</li>
+            <li>If there's something wrong w/email or password, there will be an error in the console. When you're using this LOOK AT THE CONSOLE it is your friend.</li>
+            <li>Click the "display current user info" button to show the current user's info, ie who is logged in (will display email)</li>
+        </ol>
+    </p>
+    <p>
+        Firebase reference: <a href="https://firebase.google.com/docs/auth/web/password-auth">https://firebase.google.com/docs/auth/web/password-auth</a>
+    </p>
+</body>
+
+</html>
